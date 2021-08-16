@@ -1,0 +1,84 @@
+.comment-block {
+  width: 100%;
+  display: flex;
+  padding: 20px 0;
+  border-bottom: 1px solid #c7c7c7;
+}
+
+.comment-block .title {
+  font-weight: bold;
+  display: block;
+}
+
+.user {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.user .avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  height: 75px;
+  width: 75px;
+  margin-bottom: 15px;
+}
+
+.avatar .img-responsive {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  flex: 1 100%;
+  text-align: center;
+}
+
+.contacts .tel,
+.contacts .post {
+  flex: 1;
+}
+
+.manage a{
+  display: block;
+  line-height: 35px;
+  font-weight: bold;
+  width: 60px;
+  background: #c7c7c7c7;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.manage a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: #c4c4c4;
+  transition: 1s ease;
+}
+
+.comment-text .picture{
+  width: 250px;
+  height: auto;
+  margin-right: 10px;
+  float: left;
+}
+
+.comment-text .picture:after{
+  clear: both;
+}
+
+.comment-text {
+  padding: 0 10px;
+  border-left: 2px solid #c7c7c7;
+}
+
+.comments .comment{
+  width: 100%;
+}

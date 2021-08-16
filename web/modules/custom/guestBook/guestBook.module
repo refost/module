@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function guestBook_theme($existing, $type, $theme, $path):array {
+  return [
+    'guestBook_template' => [
+      'variables' => [
+        'form' => [],
+        'data' => [],
+        'title' => [],
+      ],
+    ],
+  ];
+}

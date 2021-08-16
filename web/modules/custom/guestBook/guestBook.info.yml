@@ -1,0 +1,4 @@
+name: "Guest Book"
+description: "This module add form for comment"
+type: module
+core_version_requirement: ^8.8 || ^9

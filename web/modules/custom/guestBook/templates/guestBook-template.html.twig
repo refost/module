@@ -1,0 +1,58 @@
+{{ attach_library('guestBook/guestBook.comments') }}
+
+{{ form }}
+
+{# display block with comments #}
+<div class="comments">
+  {% for comment in data %}
+    <div class="comment-block">
+
+      {# block with Avatar and data #}
+
+      <div class="user">
+        <div class="avatar">
+          {{ comment['avatar'] }}
+        </div>
+        <span class="title">{{ 'Name'|t }}</span>
+        <span class="name">{{ comment['name'] }}</span>
+        <span class="title">{{ 'Date'|t }}</span>
+        <span class="date">{{ comment['date'] }}</span>
+      </div>
+      <div class="comment">
+
+        {# block with contacts #}
+
+        <div class="contacts">
+          <div class="tel">
+            <span class="title">{{ 'Phone'|t }}</span>
+            <span class="phone">{{ comment['phone'] }}</span>
+          </div>
+          <div class="post">
+            <span class="title">{{ 'Email
+'|t }}</span>
+            <span class="email">{{ comment['email'] }}</span>
+          </div>
+
+          {# administrative buutons #}
+
+          {% if user.hasPermission('administer nodes') %}
+            <div class="manage">
+              {{ comment['delete'] }}
+              {{ comment['edit'] }}
+            </div>
+          {% endif %}
+        </div>
+
+        {# block with comment text #}
+
+        <div class="comment-text">
+          {% if comment['image'] is not null %}
+            <div class="picture"> {{ comment['image'] }} </div>
+          {% endif %}
+          <span class="title">{{ 'Comment'|t }}</span>
+          <p>{{ comment['comment'] }}</p>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

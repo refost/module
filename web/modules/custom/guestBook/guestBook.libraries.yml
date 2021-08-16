@@ -1,0 +1,4 @@
+guestBook.comments:
+  css:
+    theme:
+      css/comment.css: {}

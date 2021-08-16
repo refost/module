@@ -1,0 +1,47 @@
+guestBook.comments:
+  path: '/guest-book/comments'
+  defaults:
+    _title: 'Hello! You can add here your comment'
+    _controller: 'Drupal\guestBook\Controller\CommentController::content'
+  requirements:
+    _permission: 'access content'
+
+guestBook.delete:
+  path: '/admin/guest-book/{id}/delete'
+  defaults:
+    _title: 'Deleting comment'
+    _form: 'Drupal\guestBook\Form\DeleteForm'
+  requirements:
+    _permission: 'administer site configuration'
+
+guestBook.edit:
+  path: '/admin/guest-book/{id}/edit'
+  defaults:
+    _title: 'Editing comment'
+    _form: 'Drupal\guestBook\Form\EditForm'
+  requirements:
+    _permission: 'administer site configuration'
+
+guestBook.manage:
+  path: '/admin/structure/guest-book/manage'
+  defaults:
+    _title: 'Manage comments'
+    _controller: 'Drupal\guestBook\Controller\AdminCommentController::content'
+  requirements:
+    _permission: 'administer site configuration'
+
+guestBook.confirm_manage:
+  path: '/admin/structure/guest-book/manage-confirm'
+  defaults:
+    _title: 'A you sure?'
+    _form: 'Drupal\guestBook\Form\AdminManageDelete'
+  requirements:
+    _permission: 'administer site configuration'
+
+guestBook.edit_manage:
+  path: '/admin/structure/guest-book/{id}/manage-edit'
+  defaults:
+    _title: 'A you sure?'
+    _form: 'Drupal\guestBook\Form\AdminManageEdit'
+  requirements:
+    _permission: 'administer site configuration'

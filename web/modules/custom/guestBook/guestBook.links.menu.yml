@@ -1,0 +1,7 @@
+guestBook.guest_book_form.collection:
+  title: 'guestBook'
+  parent: system.admin_structure
+  description: 'Manage records.'
+  route_name: guestBook.manage
+  weight: 100
+

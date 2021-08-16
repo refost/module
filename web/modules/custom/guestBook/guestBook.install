@@ -1,0 +1,61 @@
+<?php
+
+/**
+ * Creating database for module
+ */
+function guestBook_schema():array {
+  $schema['guest_book'] = [
+    'fields' => [
+      'id' => [
+        'type' =>'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'name' => [
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'email' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'phone' => [
+        'type' => 'varchar',
+        'length' => 20,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'comment' => [
+        'type' => 'varchar',
+        'length' => 1000,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'avatar' => [
+        'type' => 'int',
+        'length' => 20,
+        'not null' => FALSE,
+      ],
+      'image' => [
+        'type' => 'int',
+        'length' => 20,
+        'not null' => FALSE,
+      ],
+      'date' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+    ],
+    'primary key' => [
+      'id',
+    ],
+  ];
+
+  return $schema;
+}

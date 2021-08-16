@@ -1,0 +1,18 @@
+.invalid-message{
+  background: pink;
+  border-radius: 5px;
+  line-height: 35px;
+  text-align: center;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+
+.correct-message {
+  background: #c0ffe4;
+  border-radius: 5px;
+  line-height: 35px;
+  text-align: center;
+  font-weight: bold;
+  margin: 10px 0;
+}
